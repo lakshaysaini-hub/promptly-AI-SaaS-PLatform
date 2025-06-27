@@ -11,7 +11,9 @@ function Sheet({ ...props }) {
 }
 
 function SheetTrigger({ ...props }) {
-  return <SheetPrimitive.Trigger data-slot="sheet-trigger" {...props} />;
+  return (
+    <SheetPrimitive.Trigger asChild data-slot="sheet-trigger" {...props} />
+  );
 }
 
 function SheetClose({ ...props }) {
