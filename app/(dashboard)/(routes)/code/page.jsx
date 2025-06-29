@@ -20,8 +20,8 @@ import { Button } from "../../../../components/ui/button";
 import { Empty } from "../../../../components/Empty";
 import { Loader } from "../../../../components/Loader";
 
-import { userAvatar } from "../../../../components/userAvatar";
-import { botAvatar } from "../../../../components/botAvatar";
+import { UserAvatar } from "../../../../components/userAvatar";
+import { BotAvatar } from "../../../../components/botAvatar";
 
 import { useRouter } from "next/navigation";
 import { useState } from "react";
@@ -133,7 +133,7 @@ const CodePage = () => {
                     : "bg-muted"
                 )}
               >
-                {message.role === "user" ? <userAvatar /> : <botAvatar />}
+                {message.role === "user" ? <UserAvatar /> : <BotAvatar />}
                 <ReactMarkdown
                   components={{
                     pre: ({ node, ...props }) => (
