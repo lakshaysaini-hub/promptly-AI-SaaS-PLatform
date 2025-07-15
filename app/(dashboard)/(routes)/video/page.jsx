@@ -41,8 +41,7 @@ const VideoPage = () => {
       setVideo(undefined);
       const response = await axios.post("/api/video", values);
 
-      setVideo(response.data.video);
-
+      setVideo(response.data[0]);
       form.reset();
     } catch (error) {
       // TODO:Open Pro Model

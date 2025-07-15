@@ -27,7 +27,7 @@ export async function POST(req) {
 
     const response = await replicate.run("minimax/video-01", { input });
 
-    return NextResponse.json({ video: response });
+    return NextResponse.json({ response });
   } catch (error) {
     console.error("[VIDEO_ERROR]", error);
     return new NextResponse("Internal error", { status: 500 });
