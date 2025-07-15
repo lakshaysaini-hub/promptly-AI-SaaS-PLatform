@@ -3,7 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { Montserrat } from "next/font/google";
-
+import { FreeCounter } from "./FreeCounter";
 import { cn } from "../lib/utils";
 import {
   Code2Icon,
@@ -65,7 +65,7 @@ const routes = [
   },
 ];
 
-const Sidebar = () => {
+const Sidebar = ({ apiLimitCount }) => {
   const pathname = usePathname();
   return (
     <div className="sapce-y-4 py-4 flex flex-col h-full text-white bg-[#111827]">
@@ -102,6 +102,7 @@ const Sidebar = () => {
           })}
         </div>
       </div>
+      <FreeCounter apiLimitCount={apiLimitCount} />
     </div>
   );
 };
